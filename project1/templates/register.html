@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registration Form</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f0f0f0;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+
+      .container {
+         text-align: center;
+         padding: 20px;
+         border-radius: 10px;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+         margin-bottom: 15px;
+      }
+
+      .form-group label {
+         display: block;
+         font-weight: bold;
+         margin-bottom: 5px;
+      }
+
+      .form-group input {
+         width: 100%;
+         padding: 8px;
+         border-radius: 5px;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         /* Добавлено для корректного выравнивания с другими элементами */
+      }
+
+      .form-group button {
+         width: 100%;
+         padding: 10px;
+         background-color: #4CAF50;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      .form-group button:hover {
+         background-color: #45a049;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <h1>Registration Form</h1>
+      <form class="register-form" action="/register" method="post">
+         {% csrf_token %}
+         {% for f in form %}
+         <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+         <div class="form-error">{{ f.errors }}</div>
+         {% endfor %}
+         <input type="Submit"value="ЗАРЕГЕСТРИРОВАТЬСЯ">
+      </form>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Logout</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f0f0f0;
+         margin: 0;
+         padding: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+
+      .container {
+         text-align: center;
+         padding: 20px;
+         border-radius: 10px;
+         background-color: #ffffff;
+         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logout-link {
+         display: inline-block;
+         margin-top: 20px;
+         text-decoration: none;
+         color: #333;
+         font-weight: bold;
+         padding: 10px 20px;
+         background-color: #ff5555;
+         border-radius: 5px;
+      }
+
+      .logout-link:hover {
+         background-color: #ff3333;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <h1>Logout</h1>
+      <p>Are you sure you want to logout?</p>
+      <a href="{% url 'logout' %}" class="logout-link">Logout</a>
+   </div>
+</body>
+</html>
