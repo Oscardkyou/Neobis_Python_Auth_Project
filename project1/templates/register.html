@@ -57,21 +57,33 @@
       .form-group button:hover {
          background-color: #45a049;
       }
+
+      /* Стили для ссылки "Забыли пароль?" */
+      .forgot-password {
+         font-size: 18px;
+         margin-top: 20px;
+         display: block;
+         text-decoration: none;
+      }
    </style>
 </head>
 
 <body>
    <div class="container">
       <h1>Registration Form</h1>
-      <form class="register-form" action="/register" method="post">
+      <form class="register-form" action="{% url 'project1:register' %}" method="post">
          {% csrf_token %}
          {% for f in form %}
          <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
          <div class="form-error">{{ f.errors }}</div>
          {% endfor %}
-         <input type="Submit"value="ЗАРЕГЕСТРИРОВАТЬСЯ">
+         <input type="Submit" value="ЗАРЕГЕСТРИРОВАТЬСЯ">
       </form>
    </div>
+
+   <a href="{% url 'project1:password_reset_view' %}" class="forgot-password">Забыли пароль?</a>
+
+
 </body>
 
 </html>
