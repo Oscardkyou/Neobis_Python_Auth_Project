@@ -7,17 +7,8 @@
 ## Функции проекта:
 
 - Регистрация новых пользователей с проверкой валидности введенных данных.
-
-
-![Registration](/AuthProject/img/registration.png)
-
-
 - Вход в систему для зарегистрированных пользователей.
 - Проверка на валидацию данных
-
-
-![Validation](/AuthProject/img/validation.png)
-
 
 ## Установка:
 
@@ -54,5 +45,9 @@ python manage.py runserver
 
 Автор: [DK](https://github.com/Oscardkyou)
 
+## Скриншоты
+
+![1](/AuthProject/1111.png)
 
 
+![Добавление задачи](/AuthProject/2222.png)
