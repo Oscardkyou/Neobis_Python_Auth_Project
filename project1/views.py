@@ -77,3 +77,10 @@ class CustomPasswordResetCompleteView(PasswordResetCompleteView):
 
 class CustomPasswordResetDoneView(PasswordResetDoneView):
     template_name = 'password_reset_done.html'
+
+
+class Subject():
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
