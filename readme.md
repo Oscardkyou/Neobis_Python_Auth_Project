@@ -14,6 +14,7 @@
 
 Стандартная )
 
-![1](/AuthProject/1111.png)
+![1](/AuthProject\1111.png)
 
-![2](/AuthProject/2222.png)
+
+![2](/AuthProject\2222.png)
